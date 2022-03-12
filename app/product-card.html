@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- wSelect -->
+<link rel="stylesheet" href="css/wSelect.css" />
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>NKMZ</title>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Главная</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Обо мне</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"> Банкротство </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#"> Защита активов </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Защита активов</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Споры о правах на недвижимость и оборот недвижимости
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Подрядные споры</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Градостроительные отношения
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Земельные отношения
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Налоговые споры и вопросы налогообложения
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Сопровождение бизнеса, строительных и инвестиционных проектов
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Прочие вопросы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Публикации</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Конаткты</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="header__top">
+      <a class="logo" href="#">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <select class="header__select wSelect-el">
+        <option value="RU" data-icon="images/icons/ru.svg">RU</option>
+        <option value="RU" data-icon="images/icons/gb.svg">EN</option>
+        <option value="RU" data-icon="images/icons/ua.svg">UA</option>
+      </select>
+
+      <div class="header__links">
+        <a
+          class="header__link header__link--mail"
+          href="mailto:info@nkmzhydro.com"
+        >
+          info@nkmzhydro.com
+        </a>
+        <a class="header__link header__link--tel" href="tel:+74952300030">
+          +7 (495) 230 00 30
+        </a>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#"
+              >Решение для отрасли</a
+            >
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Банкротство</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Защита активов </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Споры о правах на недвижимость и оборот недвижимости</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подрядные споры</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Градостроительные отношения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Земельные отношения</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Налоговые споры и вопросы налогообложения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Сопровождение бизнеса, строительных и инвестиционных
+                    проектов</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Прочие вопросы</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#"
+              >Продукты и услуги</a
+            >
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Банкротство</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Защита активов </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Споры о правах на недвижимость и оборот недвижимости</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подрядные споры</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Градостроительные отношения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Земельные отношения</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Налоговые споры и вопросы налогообложения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Сопровождение бизнеса, строительных и инвестиционных
+                    проектов</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Прочие вопросы</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">О нас</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Банкротство</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Защита активов </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Споры о правах на недвижимость и оборот недвижимости</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подрядные споры</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Градостроительные отношения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Земельные отношения</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Налоговые споры и вопросы налогообложения</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Сопровождение бизнеса, строительных и инвестиционных
+                    проектов</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Прочие вопросы</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Подбор оборудования</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <!-- <div class="breadcrumbs breadcrumbs--left">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#"> Женщинам </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link">Пальто женское</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <main class="main">
+        <section class="product">
+  <div class="container">
+    <div class="product__top">
+      <h2 class="product__title section-title">ДГН СЕРИЯ</h2>
+
+      <button class="product__btn btn" type="button">
+        Заказать консультацию
+      </button>
+    </div>
+
+    <div class="product-big-card">
+      <div class="product-big-card__inner">
+        <div class="product-big-card__preview">
+          <div class="product-big-card__img">
+            <img src="images/content/product-card/2.png" alt="ДГН СЕРИЯ" />
+          </div>
+
+          <button class="product-big-card__btn btn" type="button">
+            Заказать насос
+          </button>
+
+          <div class="product-big-card__notify">
+            <p>Оставьте заявку и наши менеджеры перезвонят Вам.</p>
+            <p>
+              Так же Вы можете позвонить в нашу службу работы с клиентами по
+              телефону
+            </p>
+            <p>+7 (495) 287-08-25; +7 (495) 252-00-90.</p>
+          </div>
+        </div>
+
+        <div class="product-big-card__info">
+          <div class="product-big-card__text">
+            <p>
+              Горизонтальный одноступенчатый насос с колесом двухстороннего
+              входа с возможностью установки в вертикальном положении для воды,
+              водных растворов, подтоварной воды, ТЭЦ, АЭС, общепромышленных
+              нужд.
+            </p>
+          </div>
+
+          <div class="product-big-card__spec">
+            <span class="product-big-card__heading">
+              Общие характеристики:
+            </span>
+
+            <ul class="product-big-card__list">
+              <li class="product-big-card__item">
+                <span class="product-big-card__name">Мощность</span>
+                <span class="product-big-card__numbers">1,1 ÷ 4,1 kW</span>
+              </li>
+              <li class="product-big-card__item">
+                <span class="product-big-card__name">Кол. полюсов</span>
+                <span class="product-big-card__numbers">2 / 4 / 6</span>
+              </li>
+              <li class="product-big-card__item">
+                <span class="product-big-card__name">Напор</span>
+                <span class="product-big-card__numbers"
+                  >GAS 2” 1/2 Вер. | DN 65 ÷ DN 150 Гор.</span
+                >
+              </li>
+              <li class="product-big-card__item">
+                <span class="product-big-card__name">Свободный просвет</span>
+                <span class="product-big-card__numbers">max 150 mm</span>
+              </li>
+              <li class="product-big-card__item">
+                <span class="product-big-card__name"
+                  >Макс. производительность</span
+                >
+                <span class="product-big-card__numbers">46.4 l/s</span>
+              </li>
+              <li class="product-big-card__item">
+                <span class="product-big-card__name">Макс. напор</span>
+                <span class="product-big-card__numbers">22.3 m</span>
+              </li>
+            </ul>
+          </div>
+          <div class="product-big-card__purpose">
+            <span class="product-big-card__heading">
+              Назначение оборудования:
+            </span>
+
+            <div class="product-big-card__text">
+              <p>
+                Находит применение при наличии биологических загрязненных
+                жидкостей и канализационных неотфильтрованных стоков, а также
+                для подъема гражданских стоков. Отлично подходит для
+                использования в очистных сооружениях, канализационных системах,
+                животноводческих фермах, в промышленности и сельском хозяйстве.
+                Эта серия предназначена для системы охлаждения ZENIT для сухой
+                или полупогружной установки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="request">
+  <div class="container">
+    <div class="request__wrapper">
+      <div class="request__offer">
+        <h2 class="request__title section-title">Обратный звонок</h2>
+        <div class="request__text">
+          <p>Оставьте ваши данные и мы вам перезвоним.</p>
+        </div>
+      </div>
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="name">Имя</label>
+          <input
+            class="form-submit__input"
+            name="name"
+            id="name"
+            type="text"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="phone">
+            Контактный телефон
+          </label>
+          <input
+            class="form-submit__input"
+            name="tel"
+            id="tel"
+            type="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+          />
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    123
+  </div>
+</footer>
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- wSelect -->
+<script src="js/wSelect.min.js"></script>
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

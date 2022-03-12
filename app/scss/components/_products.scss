@@ -1,0 +1,60 @@
+.products {
+  background-color: var(--color-black);
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__title {
+    max-width: 200px;
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 230px) minmax(auto, 1010px);
+    gap: 50px;
+    @include adaptive-value('gap', 50, 40, 1);
+    
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    justify-self: center;
+    height: 100%;
+  }
+
+  &--offer-col {
+    .products {
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__offer {
+        max-width: 230px;
+        width: 100%;
+      }
+
+      &__text {
+        margin-bottom: 30px;
+      }
+
+      &__btn {
+        font-size: 17px;
+        padding: 15px;
+      }
+    }
+  }
+}

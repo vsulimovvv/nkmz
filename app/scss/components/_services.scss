@@ -1,0 +1,262 @@
+.services {
+  background-color: #1d1e1d;
+  @include adaptive-value('padding-top', 75, 40, 1);
+  @include adaptive-value('padding-bottom', 90, 50, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: rgba(16, 16, 16, 0.94);
+    width: 100%;
+    min-height: 215px;
+    height: 100%;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #333333;
+    padding-top: 100px;
+    position: relative;
+    transition: 150ms ease;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-dark);
+
+      .services__btn {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.7);
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 49px;
+      height: 49px;
+
+      top: 30px;
+      left: 20px;
+    }
+
+    &:nth-child(1) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/1.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/1.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/2.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/2.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(3) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/3.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/3.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(4) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/4.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/4.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(5) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/5.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/5.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(6) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/6.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/6.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(7) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/7.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/7.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(8) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/8.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/8.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(9) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/9.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/9.2.png'),
+            contain
+          );
+        }
+      }
+    }
+    &:nth-child(10) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/10.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        &::after {
+          @include backgroundImage(
+            url('../images/content/services/10.2.png'),
+            contain
+          );
+        }
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  &__btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: #9f9f9f;
+    background-color: #000000;
+    box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1);
+    padding: 13px 40px 13px 15px;
+    position: relative;
+    transition: 150ms ease;
+
+    &:hover {
+      transform: translateY(3px);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &::after {
+      @include elDef();
+      width: 26px;
+      height: 14px;
+      @include maskImage(url('../images/icons/arrow-left.svg'), contain);
+      background-color: #cbcbcb;
+      right: 6px;
+      top: 38%;
+      transform: rotate(180deg);
+    }
+  }
+}

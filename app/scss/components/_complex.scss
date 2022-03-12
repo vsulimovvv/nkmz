@@ -1,0 +1,108 @@
+.complex {
+  @include background(cover);
+  @include adaptive-value('padding-top', 80, 40, 1);
+  padding-bottom: 20px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__offer {
+    width: 100%;
+    height: 100%;
+    grid-column: 2/3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-column: initial;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-column: 1/-1;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    max-width: 180px;
+
+    @include breakpointsMaxW($bp-576) {
+      max-width: 100%;
+    }
+  }
+
+  &__cell {
+    justify-self: center;
+
+    background-color: rgba(16, 16, 16, 0.94);
+    max-width: 320px;
+    width: 100%;
+    min-height: 215px;
+    height: 100%;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #333333;
+    padding-top: 100px;
+    position: relative;
+    transition: 150ms ease;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-dark);
+
+      .services__btn {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.7);
+
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 49px;
+      height: 49px;
+
+      top: 30px;
+      left: 20px;
+    }
+
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/1.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/1.2.png'),
+          contain
+        );
+      }
+    }
+  }
+}
+
+.complex-card {
+}

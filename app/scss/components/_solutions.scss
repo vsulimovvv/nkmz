@@ -1,0 +1,330 @@
+.solutions {
+  @include adaptive-value('padding-bottom', 100, 50, 1);
+  &__top {
+    @include adaptive-value('padding-top', 70, 40, 1);
+    @include adaptive-value('padding-bottom', 70, 40, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__name {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 150px;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__link {
+    fill: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 100px;
+    border: 1px solid #333333;
+    width: 100%;
+    min-height: 165px;
+    padding: 25px;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    transition: 150ms ease;
+
+    &:hover {
+      .solutions__link {
+        border-color: var(--color-white);
+        fill: var(--color-white);
+      }
+    }
+
+    @include breakpointsMinW($bp-991) {
+      &:hover {
+        background-color: var(--color-white);
+        color: var(--color-dark);
+        transform: scale(1.1);
+        padding: 25px 15px;
+        z-index: 2;
+
+        .solutions__link {
+          display: none;
+        }
+        .solutions__btn {
+          display: block;
+        }
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 45px;
+      height: 45px;
+      top: 25px;
+      left: 25px;
+    }
+
+    &:nth-child(1) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/1.1.png'),
+          contain
+        );
+      }
+
+      @include breakpointsMinW($bp-991) {
+        &:hover {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/1.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/2.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/2.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/3.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/3.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      &::after {
+        @include breakpointsMinW($bp-991) {
+          @include backgroundImage(
+            url('../images/content/solutions/4.1.png'),
+            contain
+          );
+        }
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/4.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/5.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/5.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/6.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/6.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(7) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/7.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/7.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(8) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/8.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/8.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(9) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/9.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/9.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(10) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/10.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/10.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(11) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/11.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/11.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+    &:nth-child(12) {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/solutions/12.1.png'),
+          contain
+        );
+      }
+      &:hover {
+        @include breakpointsMinW($bp-991) {
+          &::after {
+            @include backgroundImage(
+              url('../images/content/solutions/12.2.png'),
+              contain
+            );
+          }
+        }
+      }
+    }
+  }
+
+  &--bg {
+    @include background(cover);
+
+    .solutions {
+      &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__title {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.contacts {
+  @include adaptive-value('padding-top', 60, 30, 1);
+  @include adaptive-value('padding-bottom', 60, 40, 1);
+
+  &__title {
+    font-weight: 300;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include adaptive-value('margin-bottom', 75, 40, 1);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 385px) 1fr;
+    gap: 70px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  &__name {
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 900;
+  }
+
+  &__box {
+    padding-left: 60px;
+    position: relative;
+    font-size: 15px;
+
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+
+    &::after {
+      @include elDef();
+      width: 44px;
+      height: 1px;
+      background-color: var(--color-accent);
+      left: 0;
+      top: 8px;
+    }
+  }
+
+  &__address {
+    color: #cfcfcf;
+    line-height: 1.8;
+  }
+
+  &__connect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding-left: 60px;
+  }
+
+  &__link {
+    padding-left: 40px;
+    font-size: 22px;
+    position: relative;
+    transition: 150ms ease;
+
+    &::after {
+      @include elDef();
+      width: 21px;
+      height: 21px;
+      @include background(contain);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &--phone {
+      &::after {
+        background-image: url('../images/phone-2.png');
+      }
+
+      &:hover {
+        &::after {
+          background-image: url('../images/phone-2-bg.png');
+        }
+      }
+    }
+
+    &--mail {
+      &::after {
+        background-image: url('../images/mail.png');
+      }
+
+      &:hover {
+        &::after {
+          background-image: url('../images/mail-bg.png');
+        }
+      }
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 477px;
+
+    @include breakpointsMaxW($bp-768) {
+      height: calc(280px + (477 - 280) * ((100vw - 375px) / (768 - 375)));
+    }
+  }
+}
