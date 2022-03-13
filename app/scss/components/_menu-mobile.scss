@@ -17,6 +17,7 @@
   overflow-x: auto;
 
   @include adaptive-value('padding', 40, 20, 1);
+  padding-bottom: 40px !important;
 
   &.active {
     opacity: 1;
