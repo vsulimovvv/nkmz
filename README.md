@@ -1,4 +1,4 @@
-## СЕВЕРО-ЗАПАДНАЯ МЕДИЦИНСКАЯ КЛИНИКа
+## NKMZ Hydro
 ### Страницы
 Главная: https://vsulimovvv.github.io/nkmz/app/index.html  
 Решение для отрасли: https://vsulimovvv.github.io/nkmz/app/solutions.html  
