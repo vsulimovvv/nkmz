@@ -75,7 +75,9 @@
 
         &:hover {
           background-color: var(--color-bg);
+          color: var(--color-white);
         }
+        
         .choices__item--selectable {
           background-color: #ededed;
         }

@@ -1,6 +1,11 @@
 .hero {
-  @include adaptive-value('padding-top', 60, 20, 1);
+  padding-top: 240px;
   padding-bottom: 40px;
+  @include background(cover);
+
+  @include breakpointsMaxW($bp-991) {
+    padding-top: calc(120px + (150 - 120) * ((100vw - 320px) / (991 - 320)));
+  }
 
   &__title {
     font-weight: 300;
@@ -22,6 +27,7 @@
   &__offer {
     @include adaptive-value('padding-top', 50, 20, 1);
     max-width: 445px;
+    
     @include breakpointsMaxW($bp-991) {
       max-width: 100%;
     }
@@ -45,9 +51,6 @@
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
-  }
-
-  &__slide {
   }
 
   &__preview {

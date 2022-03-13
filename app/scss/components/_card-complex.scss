@@ -1,0 +1,233 @@
+.complex-card {
+  background-color: rgba(21, 21, 21, 0.9);
+  max-width: 320px;
+  min-height: 265px;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #333333;
+  padding-top: 135px;
+  position: relative;
+  transition: 150ms ease;
+  gap: 20px;
+
+  &__heading {
+    font-size: 17px;
+  }
+
+  &__btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: #9f9f9f;
+    background-color: #000000;
+    box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1);
+    padding: 13px 40px 13px 15px;
+    position: relative;
+    transition: 150ms ease;
+    margin-top: auto;
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &::after {
+      @include elDef();
+      width: 26px;
+      height: 14px;
+      @include maskImage(url('../images/icons/arrow-left.svg'), contain);
+      background-color: #cbcbcb;
+      right: 6px;
+      top: 38%;
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+
+    .complex-card__btn {
+      transform: translateY(3px);
+      background-color: var(--color-accent);
+      color: var(--color-white);
+
+      &::after {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &::after {
+    @include elDef();
+    width: 64px;
+    height: 64px;
+
+    top: 30px;
+    left: 20px;
+  }
+
+  &--horizontal {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/1.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/1.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--vertical {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/2.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/2.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--modernization {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/3.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/3.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--service {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/4.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/4.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--test {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/5.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/5.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--automation {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/6.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/6.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--hydro-turbines {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/7.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/7.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--finance {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/8.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/8.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--pumps-turbines {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/9.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/9.2.png'),
+          contain
+        );
+      }
+    }
+  }
+  &--special {
+    &::after {
+      @include backgroundImage(
+        url('../images/content/services/10.1.png'),
+        contain
+      );
+    }
+    &:hover {
+      &::after {
+        @include backgroundImage(
+          url('../images/content/services/10.2.png'),
+          contain
+        );
+      }
+    }
+  }
+}

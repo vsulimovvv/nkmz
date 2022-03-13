@@ -1,5 +1,7 @@
 .solutions {
   @include adaptive-value('padding-bottom', 100, 50, 1);
+  background-color: var(--color-bg);
+
   &__top {
     @include adaptive-value('padding-top', 70, 40, 1);
     @include adaptive-value('padding-bottom', 70, 40, 1);
@@ -148,12 +150,10 @@
     }
     &:nth-child(4) {
       &::after {
-        @include breakpointsMinW($bp-991) {
-          @include backgroundImage(
-            url('../images/content/solutions/4.1.png'),
-            contain
-          );
-        }
+        @include backgroundImage(
+          url('../images/content/solutions/4.1.png'),
+          contain
+        );
       }
       &:hover {
         @include breakpointsMinW($bp-991) {

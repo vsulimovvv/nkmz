@@ -9,7 +9,8 @@
   padding: 30px;
   gap: 15px;
   transition: 150ms ease;
-  
+  z-index: 1;
+
   &:hover {
     border-color: rgba(234, 234, 234, 0.5);
   }

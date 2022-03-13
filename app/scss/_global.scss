@@ -60,6 +60,11 @@ body {
 
 .logo {
   flex-shrink: 0;
+  width: 125px;
+  height: 45px;
+  img {
+    @include img(contain);
+  }
 }
 
 .section-title {

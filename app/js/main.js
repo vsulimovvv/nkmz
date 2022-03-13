@@ -6,24 +6,25 @@ window.addEventListener('DOMContentLoaded', () => {
   $('.wSelect-el').wSelect();
 
   // * ===== Slider
-  (function slider() {
+  (function sliderHero() {
     const sliderEl = document.querySelector('.hero__slider');
     new Swiper(sliderEl, {
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.hero__arrow--next',
+        prevEl: '.hero__arrow--prev',
       },
     });
   })();
-  (function slider() {
+
+  (function sliderPhotos() {
     const sliderEl = document.querySelector('.photos__slider');
     new Swiper(sliderEl, {
       slidesPerView: 'auto',
       spaceBetween: 20,
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.photos__arrow--next',
+        prevEl: '.photos__arrow--prev',
       },
       pagination: {
         el: '.swiper-pagination',

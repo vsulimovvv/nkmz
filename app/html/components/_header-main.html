@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-
-<!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- nouislider -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
-/>
-
-<!-- Choices JS  -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
-/>
-
-<!-- Custom Link -->
-<link rel="stylesheet" href="css/style.min.css" />
-
-
-    <title>NKMZ</title>
-  </head>
-
-  <body>
-    <div class="site-wrapper">
-      <header class="header">
-
+<header class="header header--main">
   <div class="overlay"></div>
 
   <div class="mobile-menu">
@@ -117,14 +83,17 @@
     </ul>
   </div>
 
-
   <div class="container">
     <div class="header__top">
       <a class="logo" href="#">
         <img src="images/logo.png" alt="Логотип" />
       </a>
 
-      <select class="header__select" name="" id=""></select>
+      <select class="header__select wSelect-el">
+        <option value="RU" data-icon="images/icons/ru.svg">RU</option>
+        <option value="RU" data-icon="images/icons/gb.svg">EN</option>
+        <option value="RU" data-icon="images/icons/ua.svg">UA</option>
+      </select>
 
       <div class="header__links">
         <a
@@ -301,187 +270,3 @@
     </div>
   </div>
 </header>
-
-
-      <!-- <div class="breadcrumbs breadcrumbs--left">
-        <div class="container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#"> Женщинам </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Пальто женское</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-
-      <main class="main">
-        <section class="equipment">
-  <div class="container">
-    <div class="equipment__wrapper">
-      <form class="equipment__form form-select">
-        <div class="form-select__group">
-          <label class="form-select__label" for="area"
-            >Область применения</label
-          >
-          <select class="select" name="area" id="area">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="medium"
-            >Перекачиваемая среда</label
-          >
-          <select class="select" name="medium" id="medium">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="type">Тип насоса</label>
-          <select class="select" name="type" id="type">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="version"
-            >Исполнение насоса</label
-          >
-          <select class="select" name="version" id="version">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="delivery">Подача</label>
-          <select class="select" name="delivery" id="delivery">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="head">Напор</label>
-          <select class="select" name="head" id="head">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-select__group">
-          <label class="form-select__label" for="rotation">
-            Частота вращения
-          </label>
-          <select class="select" name="rotation" id="rotation">
-            <option value="1">Выберите из списка</option>
-            <option value="2">Выберите из списка</option>
-            <option value="3">Выберите из списка</option>
-          </select>
-        </div>
-
-        <div class="form-select__group">
-          <button class="form-select__btn btn" type="submit">
-            Подобрать оборудование
-          </button>
-        </div>
-        <div class="form-select__group">
-          <button
-            class="form-select__btn btn form-select__btn--dark"
-            type="reset"
-          >
-            Сбросить все значения
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-        <section class="request">
-  <div class="container">
-    <div class="request__wrapper">
-      <div class="request__offer">
-        <h2 class="request__title section-title">Обратный звонок</h2>
-        <div class="request__text">
-          <p>Оставьте ваши данные и мы вам перезвоним.</p>
-        </div>
-      </div>
-      <form class="request__form form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="name">Имя</label>
-          <input
-            class="form-submit__input"
-            name="name"
-            id="name"
-            type="text"
-            placeholder="Введите ваше имя"
-            required
-          />
-        </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="phone">
-            Контактный телефон
-          </label>
-          <input
-            class="form-submit__input"
-            name="tel"
-            id="tel"
-            type="tel"
-            placeholder="+7 (___) ___-__-__"
-            required
-          />
-        </div>
-
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-      </main>
-      <footer class="footer">
-  <div class="container">
-    123
-  </div>
-</footer>
-    </div>
-
-    <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- nouislider -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- Choices JS -->
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-
-<!-- Input Mask -->
-<script
-  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
-  type="text/javascript"
-></script>
-
-<!-- JS -->
-<script src="js/main.min.js"></script>
-
-  </body>
-</html>

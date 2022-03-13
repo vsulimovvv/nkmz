@@ -1,6 +1,7 @@
 .contacts {
   @include adaptive-value('padding-top', 60, 30, 1);
   @include adaptive-value('padding-bottom', 60, 40, 1);
+  background-color: var(--color-bg);
 
   &__title {
     font-weight: 300;
