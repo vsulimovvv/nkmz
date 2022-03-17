@@ -6,6 +6,10 @@
 
   &__title {
     @include adaptive-value('margin-bottom', 50, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
+    }
   }
 
   &__list {

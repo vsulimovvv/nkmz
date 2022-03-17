@@ -24,7 +24,7 @@
     font-weight: 500;
     color: #9f9f9f;
     background-color: #000000;
-    box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 13px 40px 13px 15px;
     position: relative;
     transition: 150ms ease;
@@ -32,6 +32,10 @@
 
     &:active {
       transform: scale(0.98);
+    }
+
+    &:hover {
+      border-color: var(--color-accent);
     }
 
     &::after {

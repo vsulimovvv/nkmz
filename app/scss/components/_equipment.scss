@@ -13,7 +13,8 @@
 
     @include breakpointsMaxW($bp-991) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
     }
   }
 

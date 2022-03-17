@@ -14,7 +14,8 @@
 
       @include breakpointsMaxW($bp-991) {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
       }
     }
   }
@@ -51,7 +52,7 @@
       grid-template-columns: repeat(2, minmax(auto, 310px));
     }
 
-    @include breakpointsMaxW($bp-768) {
+    @include breakpointsMaxW($bp-576) {
       grid-template-columns: minmax(auto, 310px);
     }
   }

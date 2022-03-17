@@ -91,17 +91,24 @@ body {
 
   &--dark {
     font-size: 13px;
-    padding: 10px 25px;
+    padding: 10px 35px 10px 25px;
     background-color: var(--color-black);
-    box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
 
     &:hover {
-      box-shadow: 3px 3px 0px 0px rgba(255, 255, 255, 0.6);
+      border-color: var(--color-accent);
     }
 
-    &:active {
-      transform: translate(2px, 2px);
-      box-shadow: none;
+    &::after {
+      @include elDef();
+      width: 26px;
+      height: 14px;
+      @include maskImage(url('../images/icons/arrow-left.svg'), contain);
+      background-color: #cbcbcb;
+      right: 6px;
+      top: 30%;
+      transform: rotate(180deg);
     }
   }
 }

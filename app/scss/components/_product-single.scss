@@ -12,7 +12,8 @@
 
       @include breakpointsMaxW($bp-991) {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
       }
     }
   }
@@ -22,27 +23,9 @@
   @include adaptive-value('padding-top', 60, 40, 1);
   @include adaptive-value('padding-bottom', 100, 60, 1);
   color: #cfcfcf;
-  background-color: var(--color-dark);
+  background-color: var(--color-bg);
   position: relative;
   z-index: 1;
-
-  &::after {
-    @include elDef();
-    width: 50%;
-    height: 100%;
-    background-color: #1e1e1e;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    @include breakpointsMaxW($bp-container) {
-      width: 48%;
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      display: none;
-    }
-  }
 
   &__inner {
     display: grid;
@@ -103,6 +86,10 @@
     font-size: 22px;
     font-weight: 700;
     @include adaptive-value('margin-bottom', 50, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -114,16 +101,14 @@
 
     @include breakpointsMaxW($bp-768) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 15px;
+      text-align: center;
     }
 
     &:not(:last-child) {
       border-bottom: 1px solid #1c1c1c;
     }
-  }
-
-  &__name {
   }
 
   &__numbers {
@@ -132,7 +117,14 @@
     text-align: right;
 
     @include breakpointsMaxW($bp-768) {
-      text-align: left;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    @include breakpointsMaxW($bp-768) {
+      width: 100%;
     }
   }
 
@@ -142,6 +134,10 @@
 
     &:not(:last-child) {
       @include adaptive-value('margin-bottom', 50, 30, 1);
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
     }
   }
 }

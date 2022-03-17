@@ -17,6 +17,11 @@
 
   &__offer {
     flex-shrink: 0;
+
+    @include breakpointsMaxW($bp-768) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   &__title {

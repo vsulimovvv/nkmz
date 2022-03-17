@@ -15,9 +15,13 @@
   &__offer {
     max-width: 300px;
     width: 100%;
-    
+
     @include breakpointsMaxW($bp-991) {
       max-width: 100%;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
     }
   }
 

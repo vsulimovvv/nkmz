@@ -41,8 +41,15 @@
   &__title {
     max-width: 180px;
 
+    span {
+      display: block;
+    }
+
     @include breakpointsMaxW($bp-576) {
       max-width: 100%;
+      span{
+        display: inline;
+      }
     }
   }
 
