@@ -1,6 +1,7 @@
 .header {
   padding: 30px 0 0 0;
   background-color: var(--color-bg);
+  position: relative;
 
   @include breakpointsMaxW($bp-991) {
     padding: 30px 0;
@@ -15,6 +16,7 @@
 
     @include breakpointsMaxW($bp-991) {
       padding: 0;
+      display: none;
     }
   }
 
@@ -23,10 +25,56 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-    @include breakpointsMaxW($bp-991) {
+    .header__logo--fixed {
       display: none;
-      border-top: 0;
-      border-bottom: 0;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      border-top: none;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &.scroll-header {
+      .header__logo--fixed {
+        display: block;
+      }
+
+      display: block;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: var(--color-bg);
+      box-shadow: 0 0 0 1px var(--color-dark-3);
+      z-index: 7;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 80px;
+
+      @include breakpointsMaxW($bp-container) {
+        gap: calc(35px + (80 - 35) * ((100vw - 991px) / (1300 - 991)));
+      }
+      @include breakpointsMaxW($bp-991) {
+        .header__logo {
+          display: block;
+        }
+      }
+
+      .menu {
+        &__link {
+          font-weight: 400;
+
+          @include breakpointsMaxW($bp-container) {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 
@@ -126,6 +174,48 @@
       margin-left: auto;
     }
   }
+
+  // &__fixed {
+  //   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  //   display: none;
+
+  //   &.scroll-header {
+  //     display: block;
+  //     position: fixed;
+  //     width: 100%;
+  //     top: 0;
+  //     padding-top: 20px;
+  //     padding-bottom: 20px;
+  //     background-color: var(--color-bg);
+  //     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  //     z-index: 5;
+  //   }
+
+  //   &-inner {
+  //     padding: 17px 0;
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 80px;
+
+  //     @include breakpointsMaxW($bp-container){
+  //       gap: calc(35px + (80 - 35) * ((100vw - 991px) / (1300 - 991)));
+  //     }
+
+  //     .logo {
+  //       width: 100px;
+  //     }
+
+  //     .menu {
+  //       &__link {
+  //         font-weight: 400;
+
+  //         @include breakpointsMaxW($bp-container){
+  //           font-size: 14px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   &--main {
     position: absolute;

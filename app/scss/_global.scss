@@ -59,8 +59,10 @@ body {
 
 .logo {
   flex-shrink: 0;
+  display: block;
   width: 125px;
   height: 45px;
+
   img {
     @include img(contain);
   }
@@ -118,6 +120,7 @@ body {
   position: relative;
   width: 30px;
   height: 20px;
+  z-index: 2;
 
   &::after {
     @include elDef();
