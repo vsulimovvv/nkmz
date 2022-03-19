@@ -66,9 +66,9 @@ function browsersync() {
 function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({
-      outputStyle: 'compressed'
+      outputStyle: 'expanded'
     }))
-    .pipe(concat('style.min.css'))
+   
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
       grid: true
@@ -116,7 +116,7 @@ function images() {
 function build() {
   return src([
       'app/**/*.html',
-      'app/css/style.min.css',
+      'app/css/style.css',
       'app/js/main.min.js',
       'app/fonts/**'
     ], {
