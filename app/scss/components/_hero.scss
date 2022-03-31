@@ -54,7 +54,7 @@
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
-    z-index: 10;
+    z-index: 5;
 
     @include breakpointsMaxW($bp-991) {
       left: 50%;

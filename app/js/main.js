@@ -111,14 +111,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
 
-  // // * ===== Mixer
-  // (function mixer() {
-  //   const mixContent = document.querySelector('.mixer__content');
-  //   if (mixContent) {
-  //     const mixer = mixitup(mixContent);
-  //   }
-  // })();
-
   // * ===== Modal
   (function modals() {
     function bindModal(openBtn, modal, close) {
@@ -160,52 +152,52 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.btn-service', '.popup--service', '.popup__close');
   })();
 
-  // // * ===== Toggle Tabs
-  // function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
-  //   const header = document.querySelectorAll(headerSelector);
-  //   const tab = document.querySelectorAll(tabSelector);
-  //   const content = document.querySelectorAll(contentSelector);
+  // * ===== Toggle Tabs
+  function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
+    const header = document.querySelectorAll(headerSelector);
+    const tab = document.querySelectorAll(tabSelector);
+    const content = document.querySelectorAll(contentSelector);
 
-  //   if (header) {
-  //     hideTabContent();
-  //     showTabContent();
+    if (header) {
+      hideTabContent();
+      showTabContent();
 
-  //     function hideTabContent() {
-  //       content.forEach((item) => {
-  //         item.classList.remove('active');
-  //       });
-  //       tab.forEach((item) => {
-  //         item.classList.remove(activeClass);
-  //       });
-  //     }
+      function hideTabContent() {
+        content.forEach((item) => {
+          item.classList.remove('active');
+        });
+        tab.forEach((item) => {
+          item.classList.remove(activeClass);
+        });
+      }
 
-  //     function showTabContent(i = 0) {
-  //       content[i].classList.add('active');
-  //       tab[i].classList.add(activeClass);
-  //     }
+      function showTabContent(i = 0) {
+        content[i].classList.add('active');
+        tab[i].classList.add(activeClass);
+      }
 
-  //     header.forEach((item) => {
-  //       if (item) {
-  //         item.addEventListener('click', (e) => {
-  //           const target = e.target;
+      header.forEach((item) => {
+        if (item) {
+          item.addEventListener('click', (e) => {
+            const target = e.target;
 
-  //           if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-  //             tab.forEach((item, i) => {
-  //               if (target == item || target.parentNode == item) {
-  //                 hideTabContent();
-  //                 showTabContent(i);
-  //               }
-  //             });
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  // }
-  // someTabs(
-  //   '.planning__content',
-  //   '.planning__nav-btn',
-  //   '.planning__panel',
-  //   'planning__nav-btn--active'
-  // );
+            if (target.classList.contains(tabSelector.replace(/\./, ''))) {
+              tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                  hideTabContent();
+                  showTabContent(i);
+                }
+              });
+            }
+          });
+        }
+      });
+    }
+  }
+  someTabs(
+    '.product__tabs',
+    '.tabs__btn',
+    '.tabs__content',
+    'tabs__btn--active'
+  );
 });

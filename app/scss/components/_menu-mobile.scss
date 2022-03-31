@@ -59,6 +59,11 @@
     font-size: 20px;
     width: 100%;
     display: block;
+
+    &--btn {
+      display: inline-block;
+      width: auto;
+    }
   }
 
   .mobile-menu-box {
