@@ -27,9 +27,12 @@
   &__offer {
     @include adaptive-value('padding-top', 50, 20, 1);
     max-width: 445px;
-    
+
     @include breakpointsMaxW($bp-991) {
       max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -51,6 +54,12 @@
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
+    z-index: 10;
+
+    @include breakpointsMaxW($bp-991) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__preview {
@@ -59,5 +68,12 @@
     height: 405px;
     width: 100%;
     @include adaptive-value('height', 405, 280, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

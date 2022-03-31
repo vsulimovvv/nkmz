@@ -1,0 +1,22 @@
+.quality {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 30, 20, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: #bcbcbc;
+
+    p {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 30, 20, 1);
+      }
+    }
+  }
+}

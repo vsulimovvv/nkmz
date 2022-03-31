@@ -72,9 +72,17 @@
       &__title {
         margin-bottom: 20px;
       }
+
+      &__wrapper {
+        grid-template-columns: 1fr;
+      }
+
       &__offer {
-        max-width: 230px;
-        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
       &__text {
@@ -84,6 +92,18 @@
       &__btn {
         font-size: 17px;
         padding: 15px;
+      }
+
+      &__item {
+        width: 100%;
+        
+        .services-card {
+          max-width: 100%;
+
+          &__title {
+            @include adaptive-value('font-size', 30, 22, 1);
+          }
+        }
       }
     }
   }

@@ -1,0 +1,81 @@
+.permits {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 80px;
+    align-items: flex-start;
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr 0.8fr;
+      gap: 40px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__bottom {
+    grid-column: 1/-1;
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__right {
+    display: grid;
+    @include adaptive-value('gap', 60, 30, 1);
+  }
+
+  &__list {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__heading {
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: block;
+    font-size: 13px;
+    color: #928d93;
+    transition: 150ms ease;
+    padding-left: 30px;
+    position: relative;
+    line-height: 25px;
+
+    &::after {
+      @include elDef();
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @include backgroundImage(url('../images/content/pdf.png'), contain);
+    }
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}

@@ -90,7 +90,7 @@
       @include elDef();
       width: 22px;
       height: 22px;
-      @include backgroundImage(url('../images/square.png'), contain);
+     background-color: var(--color-accent);
       top: 8%;
       left: 0;
     }

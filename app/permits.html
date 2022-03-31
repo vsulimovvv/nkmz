@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- wSelect -->
+<link rel="stylesheet" href="css/wSelect.css" />
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+
+    <title>NKMZ</title>
+  </head>
+
+  <body>
+    <div class="popup popup--service">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="service-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="service-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--product">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказ насоса ДГН СЕРИЯ</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="product-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="product-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--consultation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказать консультацию</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="consultation-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="consultation-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" required />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+          </span>
+        </label>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <h1 class="visually-hidden">Разрешительная документация</h1>
+
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="header__top">
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <a class="mobile-menu__logo logo" href="index.html">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg width="19" height="19">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu__body">
+        <li class="mobile-menu__item">
+          <div class="mobile-menu-box accordion">
+            <button
+              class="mobile-menu-box__name accordion__control"
+              type="button"
+            >
+              Решения для отрасли
+            </button>
+
+            <div class="mobile-menu-box__content accordion__content">
+              <ul class="mobile-menu-box__list">
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Нефтегазовая отрасль
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    ЖКХ и Водоканалы
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">Защита активов</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Пищевая промышленность
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"
+                    >Химическая промышленность</a
+                  >
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Гидроэлектростанции
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Тепловые электростанции
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Атомные электростанции
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Горнодобывающая промышленность
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"
+                    >Судоходные каналы</a
+                  >
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">Мелиорация</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"
+                    >Специальные исполнения</a
+                  >
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"
+                    >Испытательный комплекс НКМЗ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="mobile-menu__item">
+          <div class="mobile-menu-box accordion">
+            <button
+              class="mobile-menu-box__name accordion__control"
+              type="button"
+            >
+              Продукты и услуги
+            </button>
+
+            <div class="mobile-menu-box__content accordion__content">
+              <ul class="mobile-menu-box__list">
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Горизонтальные насосы
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">
+                    Вертикальные насосы
+                  </a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">Гидротурбины</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"> Насосы-турбины </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="mobile-menu__item">
+          <div class="mobile-menu-box accordion">
+            <button
+              class="mobile-menu-box__name accordion__control"
+              type="button"
+            >
+              О нас
+            </button>
+
+            <div class="mobile-menu-box__content accordion__content">
+              <ul class="mobile-menu-box__list">
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">О компании</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">Сервис</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#">Система качества</a>
+                </li>
+                <li class="mobile-menu-box__item">
+                  <a class="mobile-menu-box__link" href="#"
+                    >Разрешительная документация</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#">Контакты</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#">Новости</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="#">Подбор оборудования</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="header__top-inner">
+        <a class="logo" href="index.html">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+
+        <div class="header__choose">
+          <div class="header__socials socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--youtube"
+                  aria-label="Youtube"
+                  href="#"
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--instagram"
+                  aria-label="instagram"
+                  href="#"
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--linkedin"
+                  aria-label="linkedin"
+                  href="#"
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--facebook"
+                  aria-label="facebook"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <select class="header__select wSelect-el">
+            <option value="RU" data-icon="images/icons/ru.svg">RU</option>
+            <option value="RU" data-icon="images/icons/gb.svg">EN</option>
+          </select>
+        </div>
+
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+          <span class="header__toggle-line"></span>
+          <span class="header__toggle-line"></span>
+        </button>
+
+        <div class="header__links">
+          <a
+            class="header__link header__link--mail"
+            href="mailto:info@nkmzhydro.com"
+          >
+            info@nkmzhydro.com
+          </a>
+          <a class="header__link header__link--tel" href="tel:+74952300030">
+            +7 (495) 230 00 30
+          </a>
+        </div>
+
+        <a class="header__search" href="#" aria-label="Поиск">
+          <svg width="21" height="21">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <a class="logo header__logo header__logo--fixed" href="#">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#"
+                >Решение для отрасли</a
+              >
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Нефтегазовая отрасль</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"> ЖКХ и Водоканалы</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Пищевая промышленность</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Химическая промышленность</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"> Гидроэлектростанции</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Тепловые электростанции</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Атомные электростанции</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Горнодобывающая промышленность</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Судоходные каналы</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Мелиорация</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Специальные исполнения</a
+                    >
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Испытательный комплекс НКМЗ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#"
+                >Продукты и услуги</a
+              >
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Горизонтальные насосы</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Вертикальные насосы</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Гидротурбины</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Насосы-турбины</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--dropdown" href="#">О нас</a>
+
+              <div class="dropmenu">
+                <ul class="dropmenu__list">
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">О компании</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Сервис</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#">Система качества</a>
+                  </li>
+                  <li class="dropmenu__item">
+                    <a class="dropmenu__link" href="#"
+                      >Разрешительная документация</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="header__btn btn" href="equipment.html">
+          Подбор оборудования
+        </a>
+
+        <!-- <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="main">
+        <section class="permits">
+  <div class="container">
+    <h2 class="permits__title section-title">Разрешительная документация</h2>
+
+    <div class="permits__wrapper">
+      <div class="permits__left">
+        <div class="permits__box">
+          <h3 class="permits__heading">
+            1. Декларации о соответствии ТР ТС 004, 010, 020:
+          </h3>
+
+          <div class="permits__lists">
+            <ul class="permits__list permits__list--double">
+              <li class="permits__item">
+                <a class="permits__link" href="#">
+                  ЕАЭС N RU Д-RU.РА01.В.81911/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.87754/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.47292/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.91289/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.АД35.В.05071
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.87875/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.КА01.В.18042/19
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.87803/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.ПХ01.В.18740/20
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#">
+                  ЕАЭС N RU Д-RU.РА01.В.87918/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.02913/21
+                </a>
+              </li>
+            </ul>
+            <ul class="permits__list permits__list--double">
+              <li class="permits__item">
+                <a class="permits__link" href="#">
+                  ЕАЭС N RU Д-RU.АД35.В.02032
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.40149/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.ПХ01.В.18739/20
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.АД35.В.07216
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.47119/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.47117/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА01.В.49008/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА02.В.85594/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА03.В.00036/21
+                </a>
+              </li>
+              <li class="permits__item">
+                <a class="permits__link" href="#"
+                  >ЕАЭС N RU Д-RU.РА02.В.93880/21
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="permits__right">
+        <div class="permits__box">
+          <h3 class="permits__heading">2. Сертификат API Specification Q1</h3>
+
+          <ul class="permits__list">
+            <li class="permits__item">
+              <a class="permits__link" href="#">Q1-3843</a>
+            </li>
+          </ul>
+        </div>
+        <div class="permits__box">
+          <h3 class="permits__heading">3. Лицензии ФСЭТАН:</h3>
+
+          <ul class="permits__list">
+            <li class="permits__item">
+              <a class="permits__link" href="#">ВО-11-101-3344</a>
+            </li>
+            <li class="permits__item">
+              <a class="permits__link" href="#">ВО-12-101-3343</a>
+            </li>
+          </ul>
+        </div>
+        <div class="permits__box">
+          <h3 class="permits__heading">
+            4. Сертификат соответствия требованиям ГОСТ Р ИСО 9001-2015
+          </h3>
+
+          <ul class="permits__list">
+            <li class="permits__item">
+              <a class="permits__link" href="#">ST.RU.0001.A0002736</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="permits__bottom">
+        <div class="permits__box">
+          <h3 class="permits__heading">5. Аттестаты испытательных стендов</h3>
+
+          <ul class="permits__list">
+            <li class="permits__item">
+              <a class="permits__link" href="#"
+                >Аттестат №13/130, Проведение динамических испытаний насосов и
+                насосных агрегатов в соответствии с ГОСТ6134-2007 (ГОСТ
+                ISO9906-2015) по первому классу точности</a
+              >
+            </li>
+            <li class="permits__item">
+              <a class="permits__link" href="#"
+                >Аттестат №13/91, Статические гидроиспытания и определение
+                прочностных характеристик деталей насосов и вспомогательного
+                оборудования, испытательным давлением до 12.8 МПа</a
+              >
+            </li>
+            <li class="permits__item">
+              <a class="permits__link" href="#"
+                >Аттестат №13/20 от 26.03.2021, Гидравлические приёмочные
+                (приёмо-сдаточные) и иные виды испытаний по ГОСТ16504
+                динамических насосов и насосных агрегатов (установок) мощностью
+                до 8 МВт в соответствии с требованиями ГОСТ6134-2007 и ГОСТ ISO
+                9906-2015 по первому классу точности.</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="request">
+  <div class="container">
+    <div class="request__wrapper">
+      <div class="request__offer">
+        <h2 class="request__title section-title">Обратный звонок</h2>
+        <div class="request__text">
+          <p>Оставьте ваши данные и мы вам перезвоним.</p>
+        </div>
+      </div>
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__left">
+        <div class="footer__col">
+          <span class="footer__name">Решение для отрасли</span>
+          <div class="footer__lists">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Нефтегазовая отрасль</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">ЖКХ и Водоканалы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Химическая промышленность</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"
+                  >Горнодобывающая промышленность</a
+                >
+              </li>
+            </ul>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Гидроэлектростанции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Тепловые электростанции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Судоходные каналы</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Мелиорация</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Атомные электростанции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Пищевая промышленность</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__col">
+          <span class="footer__name">Услуги</span>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Испытательный комплекс</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Автоматизация</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Модернизация</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Специальные исполнения</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">НКМЗ Сервис</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">НКМЗ Финанс</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__name">Продукты</span>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Горизонтальные насосы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Вертикальные насосы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Гидротурбины</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Насосы-турбины</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__name">Компания</span>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">О нас</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Новости</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Подбор оборудования</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__middle">
+      <div class="footer__info">
+        <a class="footer__logo" href="#">
+          <img src="images/logo-big.png" alt="Логотип" />
+        </a>
+        <div class="footer__descr">
+          <address class="footer__address">
+            Российская Федерация, г. Москва, ул. Бутлерова, д. 17, 117342,
+            Бизнес центр «NEO GEO», 9 этаж
+          </address>
+
+          <div class="footer__links">
+            <a
+              class="footer__link-contact footer__link-contact--phone"
+              href="tel:+74952300030"
+            >
+              +7 (495) 230 00 30
+            </a>
+            <a
+              class="footer__link-contact footer__link-contact--mail"
+              href="mailto:info@nkmzhydro.com"
+            >
+              info@nkmzhydro.com.
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>2022 NKMZ HYDRO</p>
+      <a href="#">Все права защищены</a>
+      <a href="#">Политика конфициальности</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- wSelect -->
+<script src="js/wSelect.min.js"></script>
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

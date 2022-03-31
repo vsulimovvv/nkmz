@@ -1,7 +1,13 @@
 .menu {
   width: 100%;
+  max-width: 800px;
+
+  @include breakpointsMaxW($bp-container) {
+    max-width: calc(650px + (800 - 650) * ((100vw - 991px) / (1300 - 991)));
+  }
 
   @include breakpointsMaxW($bp-991) {
+    max-width: 700px;
     display: none;
   }
 
@@ -13,6 +19,14 @@
 
   &__item {
     position: relative;
+  }
+
+  &__link--dropdown {
+    &:hover {
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
   }
 
   &__link {

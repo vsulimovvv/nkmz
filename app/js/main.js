@@ -45,23 +45,22 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   //* Change Background Header
-function scrollHeader() {
-  const nav = document.querySelector('.header__bottom');
+  function scrollHeader() {
+    const nav = document.querySelector('.header__top');
 
-  if (this.scrollY >= 100) {
-    nav.classList.add('scroll-header');
-  } else {
-    nav.classList.remove('scroll-header');
+    if (this.scrollY >= 10) {
+      nav.classList.add('scroll-header');
+    } else {
+      nav.classList.remove('scroll-header');
+    }
   }
-}
-window.addEventListener('scroll', scrollHeader);
+  window.addEventListener('scroll', scrollHeader);
 
-// ! Change
-const header = document.querySelector('.header__bottom');
-if (window.pageYOffset >= 100) {
-  console.log(1);
-  header.classList.add('scroll-header');
-}
+  // ! Change
+  const header = document.querySelector('.header__top');
+  if (window.pageYOffset >= 10) {
+    header.classList.add('scroll-header');
+  }
 
   // * ===== Show Menu
   (function showMenu() {

@@ -4,12 +4,16 @@
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
   height: 100vh;
   background-color: var(--color-dark-2);
   z-index: 12;
-  width: 80%;
   color: var(--color-white);
+
+  width: 400px;
+
+  @include breakpointsMaxW($bp-991) {
+    width: 80%;
+  }
 
   transform: translateX(-100%);
   opacity: 0;

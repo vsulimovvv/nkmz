@@ -173,8 +173,9 @@ body {
 }
 .wSelect-options {
   border-color: transparent !important;
-  height: 150px !important;
   overflow: auto;
+  min-height: 100px;
+  height: auto;
 }
 .wSelect-option {
   background-color: var(--color-dark-3) !important;

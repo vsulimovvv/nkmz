@@ -18,9 +18,6 @@
 
     @include breakpointsMaxW($bp-991) {
       max-width: 100%;
-    }
-
-    @include breakpointsMaxW($bp-768) {
       text-align: center;
     }
   }
@@ -75,5 +72,9 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include breakpointsMaxW($bp-991) {
+      margin: 0 auto;
+    }
   }
 }
