@@ -9,3 +9,5 @@
 О нас: https://vsulimovvv.github.io/nkmz/app/about.html  
 Контакты: https://vsulimovvv.github.io/nkmz/app/contacts.html  
 Подбор оборудования: https://vsulimovvv.github.io/nkmz/app/equipment.html  
+Разрешительная документация: https://vsulimovvv.github.io/nkmz/app/permits.html  
+Система качества: https://vsulimovvv.github.io/nkmz/app/system-quality.html  
