@@ -2,6 +2,12 @@
   background-color: var(--color-bg);
   position: relative;
 
+  .logo {
+    @include breakpointsMaxW($bp-container) {
+      width: 100px;
+    }
+  }
+
   &__toggle {
     display: none;
 
@@ -36,6 +42,7 @@
       }
     }
   }
+
   &__top {
     transition: 150ms ease;
 
@@ -50,7 +57,45 @@
       transition: 150ms ease;
     }
 
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__logo--fixed {
+    display: none;
+    @include breakpointsMaxW($bp-991) {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+
+      @include breakpointsMaxW($bp-container) {
+        gap: calc(15px + (50 - 15) * ((100vw - 991px) / (1300 - 991)));
+      }
+      @include breakpointsMaxW($bp-991) {
+        gap: 20px;
+      }
+    }
+
     &.scroll-header {
+      .header__top {
+        display: none;
+      }
+      .header__logo--fixed {
+        display: block;
+      }
+
       .header__logo--fixed {
         display: block;
       }
@@ -67,62 +112,36 @@
       z-index: 7;
 
       .header__toggle {
-        flex-shrink: 0;
-        width: 35px;
-        height: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        transition: 350ms ease-in;
-        gap: 10px;
+        @include breakpointsMaxW($bp-991) {
+          flex-shrink: 0;
+          width: 35px;
+          height: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          transition: 350ms ease-in;
+          gap: 10px;
 
-        &-line {
-          border-radius: 3px;
-          width: 100%;
-          height: 1px;
-          background-color: var(--color-white);
-          position: relative;
-          transition: 150ms ease-in;
-
-          &:nth-child(1) {
+          &-line {
+            border-radius: 3px;
             width: 100%;
-          }
-          &:nth-child(2) {
-            width: 60%;
-          }
-          &:nth-child(3) {
-            width: 80%;
+            height: 1px;
+            background-color: var(--color-white);
+            position: relative;
+            transition: 150ms ease-in;
+
+            &:nth-child(1) {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              width: 60%;
+            }
+            &:nth-child(3) {
+              width: 80%;
+            }
           }
         }
-      }
-    }
-  }
-
-  &__bottom {
-    padding: 15px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    .header__logo--fixed {
-      display: none;
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      border-top: none;
-      border-bottom: none;
-      padding: 0;
-      display: none;
-    }
-
-    &-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 50px;
-
-      @include breakpointsMaxW($bp-container) {
-        gap: calc(25px + (50 - 25) * ((100vw - 991px) / (1300 - 991)));
       }
     }
   }
@@ -133,6 +152,7 @@
     align-items: center;
     flex-shrink: 0;
     gap: 100px;
+
     @include breakpointsMaxW($bp-container) {
       gap: calc(50px + (100 - 50) * ((100vw - 991px) / (1300 - 991)));
     }
@@ -140,6 +160,25 @@
     @include breakpointsMaxW($bp-991) {
       gap: 70px;
       display: none;
+    }
+
+    &--bottom {
+      display: none;
+
+      @include breakpointsMaxW($bp-991) {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      @include breakpointsMaxW($bp-576) {
+        display: none;
+      }
+
+      .header__link {
+        @include breakpointsMaxW($bp-991) {
+          font-size: 13px;
+        }
+      }
     }
   }
 
@@ -201,8 +240,15 @@
       display: none;
     }
   }
+
   &__socials {
-    @include breakpointsMaxW($bp-991) {
+    &--bottom {
+      display: none;
+      // @include breakpointsMaxW($bp-991) {
+      //   // display: block;
+      // }
+    }
+    @include breakpointsMaxW($bp-768) {
       display: none;
     }
   }
@@ -210,7 +256,12 @@
   &__btn {
     flex-shrink: 0;
 
-    @include breakpointsMaxW($bp-991) {
+    @include breakpointsMaxW($bp-container) {
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
       display: none;
     }
   }

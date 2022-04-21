@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //* Change Background Header
   function scrollHeader() {
-    const nav = document.querySelector('.header__top');
+    const nav = document.querySelector('.header__bottom');
 
     if (this.scrollY >= 10) {
       nav.classList.add('scroll-header');
@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', scrollHeader);
 
   // ! Change
-  const header = document.querySelector('.header__top');
+  const header = document.querySelector('.header__bottom');
   if (window.pageYOffset >= 10) {
     header.classList.add('scroll-header');
   }

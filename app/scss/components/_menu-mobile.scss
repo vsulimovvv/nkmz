@@ -9,8 +9,6 @@
   z-index: 12;
   color: var(--color-white);
 
-  width: 400px;
-
   @include breakpointsMaxW($bp-991) {
     width: 80%;
   }

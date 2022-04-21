@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
   }
 
   &__item {
@@ -37,7 +38,11 @@
     position: relative;
     color: #ebebeb;
     @include breakpointsMaxW($bp-container) {
-      font-size: 15px;
+      font-size: calc(13px + (16 - 13) * ((100vw - 991px) / (1300 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991){
+      font-size: 16px;
     }
 
     &:hover {
@@ -85,6 +90,7 @@
       }
     }
   }
+  
   .dropmenu {
     transform: translateY(-10px);
     opacity: 0;
