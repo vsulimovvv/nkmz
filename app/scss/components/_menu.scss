@@ -1,9 +1,9 @@
 .menu {
   width: 100%;
-  max-width: 800px;
+  max-width: 970px;
 
   @include breakpointsMaxW($bp-container) {
-    max-width: calc(650px + (800 - 650) * ((100vw - 991px) / (1300 - 991)));
+    max-width: calc(750px + (970 - 750) * ((100vw - 991px) / (1300 - 991)));
   }
 
   @include breakpointsMaxW($bp-991) {
@@ -32,10 +32,13 @@
   &__link {
     display: block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     transition: 200ms ease;
     position: relative;
     color: #ebebeb;
+    @include breakpointsMaxW($bp-container) {
+      font-size: 15px;
+    }
 
     &:hover {
       color: var(--color-accent);
