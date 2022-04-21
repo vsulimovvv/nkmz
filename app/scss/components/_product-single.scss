@@ -5,16 +5,18 @@
   &__top {
     &-inner {
       @include adaptive-value('padding-top', 75, 40, 1);
-      @include adaptive-value('padding-bottom', 75, 40, 1);
+      padding-bottom: 110px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
+      position: relative;
 
       @include breakpointsMaxW($bp-991) {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-bottom: 30px;
       }
     }
   }
@@ -33,22 +35,31 @@
     }
   }
 
-  &__marks {
+  &__mark {
+    position: absolute;
+    bottom: calc(-100% + 100px);
+    z-index: 5;
+    background-color: var(--color-bg);
+    padding: 5px;
+
+    @include breakpointsMaxW($bp-991) {
+      position: relative;
+    }
   }
+
   .mark-box {
     &__list {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
       @include breakpointsMaxW($bp-768) {
         justify-content: center;
       }
     }
 
     &__item {
-      width: 47px;
-      height: 47px;
+      width: 60px;
+      height: 60px;
       background-color: #1e1e1e;
       display: flex;
       align-items: center;
@@ -58,12 +69,16 @@
 }
 
 .product-big-card {
-  @include adaptive-value('padding-top', 60, 40, 1);
+  @include adaptive-value('padding-top', 100, 60, 1);
   @include adaptive-value('margin-bottom', 90, 60, 1);
   color: #cfcfcf;
 
   position: relative;
   z-index: 1;
+
+  @include breakpointsMaxW($bp-991) {
+    padding-top: 30px;
+  }
 
   &__inner {
     display: grid;

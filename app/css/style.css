@@ -3085,7 +3085,7 @@ body.no-scroll {
 }
 .product__top-inner {
   padding-top: 75px;
-  padding-bottom: 75px;
+  padding-bottom: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3096,18 +3096,11 @@ body.no-scroll {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 30px;
+  position: relative;
 }
 @media (max-width: 1300px) {
   .product__top-inner {
     padding-top: calc(
-        40px + 35 *
-          ((100vw - 375px) / 925)
-      );
-  }
-}
-@media (max-width: 1300px) {
-  .product__top-inner {
-    padding-bottom: calc(
         40px + 35 *
           ((100vw - 375px) / 925)
       );
@@ -3123,6 +3116,7 @@ body.no-scroll {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    padding-bottom: 30px;
   }
 }
 .product__tools {
@@ -3153,16 +3147,24 @@ body.no-scroll {
             align-items: center;
   }
 }
+.product__mark {
+  position: absolute;
+  bottom: calc(-100% + 100px);
+  z-index: 5;
+  background-color: var(--color-bg);
+  padding: 5px;
+}
+@media (max-width: 991.98px) {
+  .product__mark {
+    position: relative;
+  }
+}
 .product .mark-box__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 3px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (60px)[4];
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
 }
 @media (max-width: 767.98px) {
   .product .mark-box__list {
@@ -3172,8 +3174,8 @@ body.no-scroll {
   }
 }
 .product .mark-box__item {
-  width: 47px;
-  height: 47px;
+  width: 60px;
+  height: 60px;
   background-color: #1e1e1e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3187,7 +3189,7 @@ body.no-scroll {
 }
 
 .product-big-card {
-  padding-top: 60px;
+  padding-top: 100px;
   margin-bottom: 90px;
   color: #cfcfcf;
   position: relative;
@@ -3196,7 +3198,7 @@ body.no-scroll {
 @media (max-width: 1300px) {
   .product-big-card {
     padding-top: calc(
-        40px + 20 *
+        60px + 40 *
           ((100vw - 375px) / 925)
       );
   }
@@ -3207,6 +3209,11 @@ body.no-scroll {
         60px + 30 *
           ((100vw - 375px) / 925)
       );
+  }
+}
+@media (max-width: 991.98px) {
+  .product-big-card {
+    padding-top: 30px;
   }
 }
 .product-big-card__inner {
