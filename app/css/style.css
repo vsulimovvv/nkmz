@@ -2383,17 +2383,17 @@ body.no-scroll {
   }
 }
 .request__text {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .form-submit {
   width: 100%;
 }
 .form-submit__label {
-  font-size: 11px;
   font-weight: 700;
+  font-size: 17px;
 }
 .form-submit__group {
   display: -webkit-box;
